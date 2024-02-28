@@ -26,7 +26,7 @@ const config = {
 		}),
 
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/my-portfolio' : '',
+			base: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
 		}
 	}
 };
