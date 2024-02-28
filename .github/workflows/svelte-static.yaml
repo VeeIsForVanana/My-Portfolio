@@ -31,15 +31,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Setup project
         run: npm install
+      - name: Prepare for Deployment
+        run: | 
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifact
-        run: npm run deploy
+        run: npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
