@@ -36,10 +36,10 @@
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar><h1>Victor's Portfolio</h1></AppBar>
+		<AppBar background="bg-gradient-to-b from-surface-800 to-surface-900 via-100%"><h1 class="h4">Victor's Portfolio</h1></AppBar>
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarLeft">
-		<AppRail>
+		<AppRail background='bg-surface-800'>
 			<AppRailAnchor href={base + "/"}>
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><Home size="35"/></div></svelte:fragment>
 				<span>Home</span>
