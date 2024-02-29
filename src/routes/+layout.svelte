@@ -5,6 +5,7 @@
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';
 	import { AppShell, AppBar, storeHighlightJs, AppRail, AppRailTile, AppRailAnchor } from '@skeletonlabs/skeleton';
+	import { base } from '$app/paths';
 	import xml from 'highlight.js/lib/languages/xml'; // for HTML
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
@@ -33,7 +34,7 @@
 	<svelte:fragment slot="sidebarLeft">
 		<AppRail>
 			<svelte:fragment slot="lead">
-				<AppRailAnchor href="/" >(icon)</AppRailAnchor>
+				<AppRailAnchor href={base + "/"} >(icon)</AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
 			<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
