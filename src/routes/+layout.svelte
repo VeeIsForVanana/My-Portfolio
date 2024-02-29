@@ -23,9 +23,10 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	// currentTile for AppRail
-	let currentTile: number = 0;
+	let currentTile: number | null = 1;
 
 	import { page } from '$app/stores';
+	import { EllipsisHorizontal, HammerOutline, HammerSharp, Home, PersonCircle } from 'svelte-ionicons';
 </script>
 
 <svelte:head>
@@ -40,20 +41,20 @@
 	<svelte:fragment slot="sidebarLeft">
 		<AppRail>
 			<svelte:fragment slot="lead">
-				<AppRailAnchor href={base + "/"} >(icon)</AppRailAnchor>
+				<AppRailAnchor href={base + "/"}><div class="flex justify-center items-center"><Home size="40"/></div></AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
 			<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 1</span>
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><PersonCircle size="35"/></div></svelte:fragment>
+				<span>About Me</span>
 			</AppRailTile>
 			<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 2</span>
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><HammerSharp size="35"/></div></svelte:fragment>
+				<span>Projects</span>
 			</AppRailTile>
 			<AppRailTile bind:group={currentTile} name="tile-3" value={2} title="tile-3">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 3</span>
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><EllipsisHorizontal size="35"/></div></svelte:fragment>
+				<span>Others</span>
 			</AppRailTile>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
