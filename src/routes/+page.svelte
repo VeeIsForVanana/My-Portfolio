@@ -1,7 +1,7 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<script>
-	export let data;
+<script lang="ts">
+	export const data = {};
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
