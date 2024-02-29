@@ -26,7 +26,7 @@
 	let currentTile: number | null = 1;
 
 	import { page } from '$app/stores';
-	import { EllipsisHorizontal, HammerOutline, HammerSharp, Home, PersonCircle } from 'svelte-ionicons';
+	import { EllipsisHorizontal, HammerSharp, Home, LogoGithub, PersonCircle } from 'svelte-ionicons';
 </script>
 
 <svelte:head>
@@ -40,9 +40,10 @@
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarLeft">
 		<AppRail>
-			<svelte:fragment slot="lead">
-				<AppRailAnchor href={base + "/"}><div class="flex justify-center items-center"><Home size="40"/></div></AppRailAnchor>
-			</svelte:fragment>
+			<AppRailAnchor href={base + "/"}>
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><Home size="35"/></div></svelte:fragment>
+				<span>Home</span>
+			</AppRailAnchor>
 			<!-- --- -->
 			<AppRailAnchor bind:group={currentTile} name="tile-1" value={0} title="tile-1">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><PersonCircle size="35"/></div></svelte:fragment>
@@ -58,7 +59,9 @@
 			</AppRailAnchor>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
-				<AppRailAnchor href={base + "/"} target="_blank" title="Account">(icon)</AppRailAnchor>
+				<AppRailAnchor href={base + "/"} target="_blank" title="Account">
+					<div class="flex justify-center items-center"><LogoGithub size="40"/></div>
+				</AppRailAnchor>
 			</svelte:fragment>
 		</AppRail>
 	</svelte:fragment>
