@@ -68,7 +68,9 @@
 	<!-- (sidebarRight) -->
 	<!-- (pageHeader) -->
 	<!-- Router Slot -->
-	<slot />
+	<div class="container h-full flex justify-center items-center">
+		<slot />
+	</div>
 	<!-- ---- / ---- -->
 	<!-- (pageFooter) -->
 	<!-- (footer) -->
