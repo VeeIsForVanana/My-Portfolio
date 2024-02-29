@@ -1,19 +1,21 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	export const data = {};
+	let visible_secondary_header = false;
+
+	setTimeout(() => {visible_secondary_header = true}, 200)
+
 </script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
+<div class="container h-full flex justify-center items-center mx-20 max-w-screen-lg">
 	<div class="space-y-5">
-		<h1 class="h1">Let's get clowning!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+		<h1 class="h1">Hi, I'm <span class="text-secondary-500">Victor</span>!</h1>
+		{#if visible_secondary_header}
+			<h3 class="h5" transition:fly={{duration: 350, y:-100}}>Welcome to my portfolio.</h3>
+		{/if}
+		<p>I am a student at the University of the Philippines Diliman currently undergoing the <span class="text-secondary-600">Bachelor of Science in Computer Science</span> program (Batch 2021, expected graduation in 2025). This portfolio is intended to showcase my projects, skills, and experience as a developer, along with a few other things.</p>
 	</div>
 </div>

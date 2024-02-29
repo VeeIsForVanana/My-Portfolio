@@ -23,9 +23,10 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	// currentTile for AppRail
-	let currentTile: number = 0;
+	let currentTile: number | null = 1;
 
 	import { page } from '$app/stores';
+	import { EllipsisHorizontal, HammerSharp, Home, LogoGithub, PersonCircle } from 'svelte-ionicons';
 </script>
 
 <svelte:head>
@@ -35,36 +36,41 @@
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar>Victor's Portfolio</AppBar>
+		<AppBar background="bg-gradient-to-b from-surface-800 to-surface-900 via-100%"><h1 class="h4">Victor's Portfolio</h1></AppBar>
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarLeft">
-		<AppRail>
-			<svelte:fragment slot="lead">
-				<AppRailAnchor href={base + "/"} >(icon)</AppRailAnchor>
-			</svelte:fragment>
+		<AppRail background='bg-surface-800'>
+			<AppRailAnchor href={base + "/"}>
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><Home size="35"/></div></svelte:fragment>
+				<span>Home</span>
+			</AppRailAnchor>
 			<!-- --- -->
-			<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 1</span>
-			</AppRailTile>
-			<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 2</span>
-			</AppRailTile>
-			<AppRailTile bind:group={currentTile} name="tile-3" value={2} title="tile-3">
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<span>Tile 3</span>
-			</AppRailTile>
+			<AppRailAnchor bind:group={currentTile} name="tile-1" value={0} title="tile-1">
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><PersonCircle size="35"/></div></svelte:fragment>
+				<span>About Me</span>
+			</AppRailAnchor>
+			<AppRailAnchor bind:group={currentTile} name="tile-2" value={1} title="tile-2">
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><HammerSharp size="35"/></div></svelte:fragment>
+				<span>Projects</span>
+			</AppRailAnchor>
+			<AppRailAnchor bind:group={currentTile} name="tile-3" value={2} title="tile-3">
+				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><EllipsisHorizontal size="35"/></div></svelte:fragment>
+				<span>Others</span>
+			</AppRailAnchor>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
-				<AppRailAnchor href={base + "/"} target="_blank" title="Account">(icon)</AppRailAnchor>
+				<AppRailAnchor href={base + "/"} target="_blank" title="Account">
+					<div class="flex justify-center items-center"><LogoGithub size="40"/></div>
+				</AppRailAnchor>
 			</svelte:fragment>
 		</AppRail>
 	</svelte:fragment>
 	<!-- (sidebarRight) -->
 	<!-- (pageHeader) -->
 	<!-- Router Slot -->
-	<slot />
+	<div class="container h-full flex justify-center items-center">
+		<slot />
+	</div>
 	<!-- ---- / ---- -->
 	<!-- (pageFooter) -->
 	<!-- (footer) -->
