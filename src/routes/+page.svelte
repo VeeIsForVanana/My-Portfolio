@@ -10,6 +10,13 @@
 
 </script>
 
+<head>
+	<meta content="Victor's Portfolio" property="og:title" />
+	<meta content="Victor's portfolio of coding projects and development experience" property="og:description" />
+	<meta content="https://veeisforvanana.github.io/My-Portfolio/" property="og:url" />
+	<meta content="#43B581" data-react-helmet="true" name="theme-color" />
+</head>
+
 <div class="container h-full flex justify-center items-center mx-20 max-w-screen-lg">
 	<div class="space-y-5">
 		<h1 class="h1">Hi, I'm <span class="text-secondary-500">Victor</span>!</h1>

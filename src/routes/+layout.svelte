@@ -59,7 +59,7 @@
 			</AppRailAnchor>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
-				<AppRailAnchor href={base + "/"} target="_blank" title="Account">
+				<AppRailAnchor href=https://github.com/VeeIsForVanana target="_blank" title="Account">
 					<div class="flex justify-center items-center"><LogoGithub size="40"/></div>
 				</AppRailAnchor>
 			</svelte:fragment>
