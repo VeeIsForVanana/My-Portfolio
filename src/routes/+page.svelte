@@ -1,19 +1,18 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	export const data = {};
+	let visible_secondary_header = true;
+
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
-		<h1 class="h1">Let's get clowning!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+		<h1 class="h1">Hi, I'm <span class="text-secondary-500">Victor</span>!</h1>
+		{#if visible_secondary_header}
+			<h3 transition:fade={{duration: 500}}>Welcome to my portfolio.</h3>
+		{/if}
 	</div>
 </div>
