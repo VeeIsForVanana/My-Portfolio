@@ -1,5 +1,9 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
+<script>
+	export let data;
+</script>
+
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
 		<h1 class="h1">Let's get clowning!</h1>
