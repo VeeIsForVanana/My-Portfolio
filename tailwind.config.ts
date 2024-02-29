@@ -18,6 +18,10 @@ export default {
 						name: 'skeleton',
 						enhancements: true,
 					},
+					{
+						name: 'rocket',
+						enhancements: true,
+					},
 				],
 			},
 		}),
