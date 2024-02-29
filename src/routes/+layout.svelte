@@ -44,18 +44,18 @@
 				<AppRailAnchor href={base + "/"}><div class="flex justify-center items-center"><Home size="40"/></div></AppRailAnchor>
 			</svelte:fragment>
 			<!-- --- -->
-			<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
+			<AppRailAnchor bind:group={currentTile} name="tile-1" value={0} title="tile-1">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><PersonCircle size="35"/></div></svelte:fragment>
 				<span>About Me</span>
-			</AppRailTile>
-			<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
+			</AppRailAnchor>
+			<AppRailAnchor bind:group={currentTile} name="tile-2" value={1} title="tile-2">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><HammerSharp size="35"/></div></svelte:fragment>
 				<span>Projects</span>
-			</AppRailTile>
-			<AppRailTile bind:group={currentTile} name="tile-3" value={2} title="tile-3">
+			</AppRailAnchor>
+			<AppRailAnchor bind:group={currentTile} name="tile-3" value={2} title="tile-3">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><EllipsisHorizontal size="35"/></div></svelte:fragment>
 				<span>Others</span>
-			</AppRailTile>
+			</AppRailAnchor>
 			<!-- --- -->
 			<svelte:fragment slot="trail">
 				<AppRailAnchor href={base + "/"} target="_blank" title="Account">(icon)</AppRailAnchor>
