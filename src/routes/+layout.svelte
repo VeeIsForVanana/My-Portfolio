@@ -36,7 +36,7 @@
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar>Victor's Portfolio</AppBar>
+		<AppBar><h1>Victor's Portfolio</h1></AppBar>
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarLeft">
 		<AppRail>
