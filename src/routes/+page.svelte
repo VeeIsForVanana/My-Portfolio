@@ -24,5 +24,12 @@
 			<h3 class="h5 mb-1" transition:fly={{duration: 350, y:-50}}>Welcome to my portfolio.</h3>
 		{/if}
 		<p>I am a student at the University of the Philippines Diliman currently undergoing the <span class="text-secondary-600">Bachelor of Science in Computer Science</span> program (Batch 2021, expected graduation in 2025). This portfolio is intended to showcase my projects, skills, and experience as a developer, along with a few other things.</p>
+
+		<div class="shadow-md p-4 bg-surface-900">
+			<h3 class="h3">Navigate using these links!</h3>
+			<ul class="list-none">
+				
+			</ul>
+		</div>
 	</div>
 </div>
