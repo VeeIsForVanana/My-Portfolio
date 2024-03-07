@@ -17,7 +17,7 @@
 	<meta content="#43B581" data-react-helmet="true" name="theme-color" />
 </head>
 
-<div class="container h-full flex justify-center items-center mx-20 max-w-screen-lg">
+<div class="container h-full flex justify-center items-center mx-20 max-w-screen-lg prose dark:prose-invert">
 	<div class="space-y-5">
 		<h1 class="h1" style={visible_secondary_header ? "margin-bottom:0px" : "margin-bottom:68px"}>Hi, I'm <span class="text-secondary-500">Victor</span>!</h1>
 		{#if visible_secondary_header}
