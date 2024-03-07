@@ -1,6 +1,7 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { fly } from 'svelte/transition';
 
 	export const data = {};
@@ -25,10 +26,11 @@
 		{/if}
 		<p>I am a student at the University of the Philippines Diliman currently undergoing the <span class="text-secondary-600">Bachelor of Science in Computer Science</span> program (Batch 2021, expected graduation in 2025). This portfolio is intended to showcase my projects, skills, and experience as a developer, along with a few other things.</p>
 
-		<div class="shadow-md p-4 bg-surface-900">
-			<h3 class="h3">Navigate using these links!</h3>
+		<div class="shadow-md p-4 bg-surface-900/10 rounded-lg text-tertiary-500">
+			<h3 class="h3 mt-2 text-inherit">Navigate using these links!</h3>
 			<ul class="list-none">
-				
+				<li><p><a href={base + "/about-me"}>About Me</a> for tidbits about me personally, my education, and experience</p></li>
+				<li><p><a href={base + "/projects"}>My Projects</a> for information about my projects</p></li>
 			</ul>
 		</div>
 	</div>
