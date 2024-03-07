@@ -45,11 +45,11 @@
 				<span>Home</span>
 			</AppRailAnchor>
 			<!-- --- -->
-			<AppRailAnchor bind:group={currentTile} name="tile-1" value={0} title="tile-1">
+			<AppRailAnchor href={base + "/about-me"} bind:group={currentTile} name="tile-1" value={0} title="tile-1">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><PersonCircle size="35"/></div></svelte:fragment>
 				<span>About Me</span>
 			</AppRailAnchor>
-			<AppRailAnchor bind:group={currentTile} name="tile-2" value={1} title="tile-2">
+			<AppRailAnchor href={base + "/projects"} bind:group={currentTile} name="tile-2" value={1} title="tile-2">
 				<svelte:fragment slot="lead"><div class="flex justify-center items-center"><HammerSharp size="35"/></div></svelte:fragment>
 				<span>Projects</span>
 			</AppRailAnchor>
