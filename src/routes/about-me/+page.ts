@@ -1,4 +1,4 @@
-export function load({ params }) {
+export function load() {
     return {
         title: "About Me"
     }

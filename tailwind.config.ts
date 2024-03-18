@@ -15,10 +15,6 @@ export default {
 			themes: {
 				preset: [
 					{
-						name: 'skeleton',
-						enhancements: true,
-					},
-					{
 						name: 'rocket',
 						enhancements: true,
 					},
